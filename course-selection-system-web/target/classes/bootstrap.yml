@@ -1,0 +1,66 @@
+spring:
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+  messages:
+    encoding: UTF-8
+  application:
+    name: course-selection-system-web
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        namespace: ${spring.cloud.nacos.config.namespace}
+      config:
+        server-addr: 47.98.135.254:8848
+        namespace: ed2f4114-ea1a-48f1-b67d-039aeaa1c41a
+        file-extension: yaml
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      name: druidDataSource
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-active: 20
+      initial-size: 1
+      use-global-data-source-stat: true
+      min-idle: 1
+      max-wait: 60000
+      max-open-prepared-statements: 20
+      pool-prepared-statements: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+#  data:
+#    elasticsearch:
+#      cluster-name: myElasticsearch
+#      cluster-nodes: #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
+#      properties:
+#        path:
+#          logs: ./elasticsearch/log #elasticsearch日志存储目录
+#          data: ./elasticsearch/data #elasticsearch数据存储目录
+##pagehelper配置
+pagehelper:
+  params: count=countSql
+  reasonable: true
+  support-methods-arguments: true
+  helper-dialect: mysql
+
+
+server:
+  port: 8080
+#  servlet:
+#    context-path: /course-selection-system/

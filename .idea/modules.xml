@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/course-selection-system.iml" filepath="$PROJECT_DIR$/.idea/course-selection-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-selection-system-base/course-selection-system-base.iml" filepath="$PROJECT_DIR$/course-selection-system-base/course-selection-system-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-selection-system-dependencies/course-selection-system-dependencies.iml" filepath="$PROJECT_DIR$/course-selection-system-dependencies/course-selection-system-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-selection-system-student/course-selection-system-student.iml" filepath="$PROJECT_DIR$/course-selection-system-student/course-selection-system-student.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-api/course-selection-system-student-api.iml" filepath="$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-api/course-selection-system-student-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-privoder/course-selection-system-student-privoder.iml" filepath="$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-privoder/course-selection-system-student-privoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-selection-system-web/course-selection-system-web.iml" filepath="$PROJECT_DIR$/course-selection-system-web/course-selection-system-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-api/xiqing-home-commodity-service.iml" filepath="$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-api/xiqing-home-commodity-service.iml" />
+    </modules>
+  </component>
+</project>
