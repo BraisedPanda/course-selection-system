@@ -20,7 +20,7 @@ public class PageController {
 
     @GetMapping("/toDashboard4")
     public ModelAndView toDashboard4(){
-        return new ModelAndView("dashboard/dashboard-4");
+        return new ModelAndView("dashboard/dashboard");
     }
 
     @GetMapping("/toDashboard2")
