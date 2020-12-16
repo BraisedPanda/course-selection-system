@@ -62,5 +62,5 @@ pagehelper:
 
 server:
   port: 8080
-#  servlet:
-#    context-path: /course-selection-system/
+  servlet:
+    context-path: /course-selection-system/

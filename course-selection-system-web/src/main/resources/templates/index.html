@@ -11,14 +11,14 @@
 	<title>CourseSelectionSystem</title>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
-	<link rel="stylesheet" href="assets/css/fonts/linecons/css/linecons.css">
+	<link rel="stylesheet" th:href="@{/assets/css/fonts/linecons/css/linecons.css}">
 	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
 	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
-	<link rel="stylesheet" href="assets/css/xenon-core.css">
-	<link rel="stylesheet" href="assets/css/xenon-forms.css">
-	<link rel="stylesheet" href="assets/css/xenon-components.css">
-	<link rel="stylesheet" href="assets/css/xenon-skins.css">
-	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" th:href="@{/assets/css/xenon-core.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/xenon-forms.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/xenon-components.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/xenon-skins.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/custom.css}">
 
 	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 
@@ -200,12 +200,12 @@
 						</a>
 						<ul>
 							<li class="active">
-								<a th:href="@{/toDashboard4}">
-									<span class="title">首页 1</span>
+								<a th:href="@{/page/toDashboard4}">
+									<span class="title">首页 4</span>
 								</a>
 							</li>
 							<li>
-								<a href="dashboard-2.html">
+								<a th:href="@{/page/toDashboard2}">
 									<span class="title">首页 2</span>
 								</a>
 							</li>
@@ -429,7 +429,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="tables-datatables.html">
+								<a th:href="@{/page/toDataTables}">
 									<span class="title">Data Tables</span>
 								</a>
 							</li>
@@ -1875,23 +1875,23 @@
 
 
 	<!-- Bottom Scripts -->
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/TweenMax.min.js"></script>
-	<script src="assets/js/resizeable.js"></script>
-	<script src="assets/js/joinable.js"></script>
-	<script src="assets/js/xenon-api.js"></script>
-	<script src="assets/js/xenon-toggles.js"></script>
+	<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+	<script th:src="@{/assets/js/TweenMax.min.js}"></script>
+	<script th:src="@{/assets/js/resizeable.js}"></script>
+	<script th:src="@{/assets/js/joinable.js}"></script>
+	<script th:src="@{/assets/js/xenon-api.js}"></script>
+	<script th:src="@{/assets/js/xenon-toggles.js}"></script>
 
 
 	<!-- Imported scripts on this page -->
-	<script src="assets/js/xenon-widgets.js"></script>
-	<script src="assets/js/devexpress-web-14.1/js/globalize.min.js"></script>
-	<script src="assets/js/devexpress-web-14.1/js/dx.chartjs.js"></script>
-	<script src="assets/js/toastr/toastr.min.js"></script>
+	<script th:src="@{/assets/js/xenon-widgets.js}"></script>
+	<script th:src="@{/assets/js/devexpress-web-14.1/js/globalize.min.js}"></script>
+	<script th:src="@{/assets/js/devexpress-web-14.1/js/dx.chartjs.js}"></script>
+	<script th:src="@{/assets/js/toastr/toastr.min.js}"></script>
 
 
 	<!-- JavaScripts initializations and stuff -->
-	<script src="assets/js/xenon-custom.js"></script>
+	<script th:src="@{/assets/js/xenon-custom.js}"></script>
 
 </body>
 </html>

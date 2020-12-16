@@ -19,7 +19,7 @@ public class LoginController {
 
     @GetMapping("/")
     public ModelAndView toIndex(){
-        return new ModelAndView("/index");
+        return new ModelAndView("index2");
     }
 
 }
