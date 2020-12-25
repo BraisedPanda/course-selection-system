@@ -191,20 +191,27 @@
 					<!-- add class "multiple-expanded" to allow multiple submenus to open -->
 					<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
 					<li class="active opened active">
-						<a href="dashboard-1.html">
+						<a th:href="@{/page/toDashboard4}">
 							<i class="fa-home"></i>
 							<span class="title">首页</span>
 						</a>
-						<ul>
-							<li class="active">
+						<ul class="wrap">
+							<li class="main_left active">
 								<a th:href="@{/page/toDashboard4}">
 									<span class="title">首页 4</span>
 								</a>
 							</li>
-							<li>
-								<dd class="main_left"><a data-src="/course-selection-system/page/toDashboard4" target="_top">用户列表</a></dd>
-								<a class="main_left" data-src="/course-selection-system/page/toDashboard4">
+							<li class="main_left">
+								<a data-src="/course-selection-system/page/toDashboard4" target="_top">用户列表</a>
+							</li>
+							<li class="main_left">
+								<a href="javascript:void(0)" data-src="/course-selection-system/page/toDataTables" target="_top">
 									<span class="title">首页 2</span>
+								</a>
+							</li>
+							<li class="">
+								<a href="dashboard-2.html">
+									<span class="title">Dashboard 2</span>
 								</a>
 							</li>
 						</ul>
@@ -757,7 +764,7 @@
 			
 		</div>
 		
-		<div class="main-content">
+		<div class="main-content" style="height: 500px">
 					
 
 			<nav class="navbar user-info-navbar" role="navigation">
@@ -1513,11 +1520,11 @@
 			</script>
 
 			<div class="main_right">
-				<iframe frameborder="0"  style="width: 100%" src="" id="aa">
+				<iframe   frameborder="0" scrolling="no" style="width: 100%" src="" id="aa">
 				</iframe>
 			</div>
 
-			<footer class="main-footer sticky footer-type-1">
+			<footer class="main-footer  footer-type-1" style="margin-top: 33px;">
 				
 				<div class="footer-inner">
 				
@@ -1542,10 +1549,7 @@
 				
 			</footer>
 		</div>
-		
-			
 
-		
 		
 	</div>
 	
@@ -1577,18 +1581,39 @@
 	<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
 
 	<script>
-		console.log("33333");
+
+		$().ready(function(){
+			$("iframe").attr("src","/course-selection-system/page/toDashboard4");
+		});
+
 		//获取src值
 		$(".main_left a").on("click",function(){
-			console.log("123");
 			var address =$(this).attr("data-src");
 			$("iframe").attr("src",address);
 		});
 		//一下代码是根据窗口高度在设置iframe的高度
 		var frame = $("#aa");
-
+		var conHeight = document.getElementById('aa').contentWindow.document.body.scrollHeight;
 		var frameheight = $(window).height();
-		frame.css("height",frameheight);
+		frame.css("height", frameheight);
+
+
+		$(function(){
+			$(".wrap li").click(function() {
+				$(this).siblings('li').removeClass('active');  // 删除其兄弟元素的样式
+				$(this).addClass('active');                    // 为点击元素添加类名
+			});
+		});
+
+		$(function(){
+			$(".main-menu li").click(function() {
+				$(this).siblings('li').removeClass('active opened active');
+				$(this).addClass('active opened active');
+			});
+		});
+
+
+
 	</script>
 
 </body>
