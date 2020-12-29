@@ -83,7 +83,7 @@ public class ShiroConfig {
         Map<String, Filter> filterMap = new HashMap<>(1);
         shiroFilterFactoryBean.setFilters(filterMap);
 
-        filterChainDefinitionMap.put("/**", "anon");
+//        filterChainDefinitionMap.put("/**", "anon");
 
 
         //未授权界面;

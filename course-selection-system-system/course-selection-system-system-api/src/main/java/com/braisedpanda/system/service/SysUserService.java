@@ -22,4 +22,14 @@ public interface SysUserService extends IService<SysUser> {
      * @date 2020/12/29 0029
      */
     Page<SysUser> selectSysUserPage(Page<SysUser> page, SysUser sysUser);
+
+    /**
+    * 根据用户名密码查找账户
+    * @param loginAccount 登录用户名
+    * @param password 登录密码
+    * @return com.braisedpanda.model.entity.SysUser
+    * @author chenzhen
+    * @date 2020/12/29 0029
+    */
+    SysUser selectUserByUsernameAndPassword(String loginAccount, String password);
 }
