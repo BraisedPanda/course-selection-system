@@ -12,16 +12,17 @@
         <option value="$PROJECT_DIR$/xiqing-home-web/pom.xml" />
         <option value="$PROJECT_DIR$/course-selection-system-base/pom.xml" />
         <option value="$PROJECT_DIR$/course-selection-system-web/pom.xml" />
-        <option value="$PROJECT_DIR$/course-selection-system-dependencies/pom.xml" />
         <option value="$PROJECT_DIR$/course-selection-system-student/course-selection-system-privoder/pom.xml" />
         <option value="$PROJECT_DIR$/course-selection-system-student/course-selection-system-api/pom.xml" />
         <option value="$PROJECT_DIR$/course-selection-system-student/pom.xml" />
         <option value="$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-privoder/pom.xml" />
         <option value="$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-api/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/course-selection-system-system/pom.xml" />
         <option value="$PROJECT_DIR$/xiqing-home-dependencies/xiqing-shop-commodity/pom.xml" />
       </set>
     </option>

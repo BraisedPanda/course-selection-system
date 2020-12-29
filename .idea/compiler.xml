@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,19 +10,28 @@
         <module name="xiqing-home-commodity-service" />
         <module name="course-selection-system-web" />
         <module name="demo" />
+        <module name="course-selection-system-system-api" />
+        <module name="course-selection-system-system" />
+        <module name="course-selection-system-user-api" />
+        <module name="course-selection-system-system-privoder" />
+        <module name="course-selection-system-dependencies" />
         <module name="course-selection-system-student-api" />
         <module name="course-selection-system-student-privoder" />
         <module name="course-selection-system-base" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="course-selection-system" target="1.8" />
       <module name="course-selection-system-api" target="1.8" />
       <module name="course-selection-system-base" target="1.8" />
       <module name="course-selection-system-dependencies" target="1.8" />
-      <module name="course-selection-system-privoder" target="1.8" />
       <module name="course-selection-system-student" target="1.8" />
       <module name="course-selection-system-student-api" target="1.8" />
       <module name="course-selection-system-student-privoder" target="1.8" />
+      <module name="course-selection-system-system" target="1.8" />
+      <module name="course-selection-system-system-api" target="1.8" />
+      <module name="course-selection-system-system-privoder" target="1.8" />
+      <module name="course-selection-system-user-api" target="1.5" />
       <module name="course-selection-system-web" target="1.8" />
       <module name="demo" target="1.5" />
       <module name="testpom" target="1.8" />
@@ -32,7 +42,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="course-selection-system-api" options="" />
-      <module name="course-selection-system-privoder" options="" />
+      <module name="course-selection-system-system-privoder" options="" />
       <module name="course-selection-system-web" options="" />
       <module name="testpom" options="-parameters" />
     </option>

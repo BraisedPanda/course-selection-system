@@ -11,5 +11,12 @@
 
     <artifactId>course-selection-system-student-privoder</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>course-selection-system</groupId>
+            <artifactId>course-selection-system-student-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

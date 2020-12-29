@@ -20,7 +20,7 @@ spring:
         namespace: ${spring.cloud.nacos.config.namespace}
       config:
         server-addr: 47.98.135.254:8848
-        namespace: ed2f4114-ea1a-48f1-b67d-039aeaa1c41a
+        namespace: c229ab10-2e39-4444-be97-048b3a5ef49d
         file-extension: yaml
 
   datasource:
@@ -29,7 +29,7 @@ spring:
       name: druidDataSource
       username: root
       password: 123456
-      url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+      url: jdbc:mysql://localhost:3306/course-selection-system?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
       driver-class-name: com.mysql.cj.jdbc.Driver
       max-active: 20
       initial-size: 1

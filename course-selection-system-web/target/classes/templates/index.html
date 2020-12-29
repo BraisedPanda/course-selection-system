@@ -145,10 +145,7 @@
 	</div>
 	
 	<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
-			
-		<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
-		<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
-		<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
+
 		<div class="sidebar-menu toggle-others fixed">
 			
 			<div class="sidebar-menu-inner">	
@@ -191,21 +188,20 @@
 				
 						
 				<ul id="main-menu" class="main-menu">
-					<!-- add class "multiple-expanded" to allow multiple submenus to open -->
-					<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+
 					<li class="active opened active">
-						<a href="dashboard-1.html">
+						<a th:href="@{/page/toDashboard4}">
 							<i class="fa-home"></i>
 							<span class="title">首页</span>
 						</a>
-						<ul>
-							<li class="active">
-								<a th:href="@{/page/toDashboard4}">
-									<span class="title">首页 4</span>
+						<ul class="wrap">
+							<li class="main_left active">
+								<a href="javascript:void(0)" data-src="/course-selection-system/page/toDashboard4" target="_top">
+									<span class="title">数据中心</span>
 								</a>
 							</li>
-							<li>
-								<a th:href="@{/page/toDashboard2}">
+							<li class="main_left">
+								<a href="javascript:void(0)" data-src="/course-selection-system/page/toDataTables" target="_top">
 									<span class="title">首页 2</span>
 								</a>
 							</li>
@@ -218,28 +214,28 @@
 							<i class="linecons-cog"></i>
 							<span class="title">Dashboard</span>
 						</a>
-						<ul>
-							<li class="active">
-								<a href="dashboard-1.html">
-									<span class="title">Dashboard 1</span>
+						<ul class="wrap">
+							<li class="main_left active">
+								<a href="javascript:void(0)" data-src="/course-selection-system/page/toDashboard4" target="_top">
+									<span class="title">数据中心</span>
 								</a>
 							</li>
-							<li>
-								<a href="dashboard-2.html">
-									<span class="title">Dashboard 2</span>
+							<li class="main_left">
+								<a href="javascript:void(0)" data-src="/course-selection-system/page/toDataTables" target="_top">
+									<span class="title">首页 2</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="dashboard-3.html">
 									<span class="title">Dashboard 3</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="dashboard-4.html">
 									<span class="title">Dashboard 4</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="skin-generator.html">
 									<span class="title">Skin Generator</span>
 								</a>
@@ -251,38 +247,38 @@
 							<i class="linecons-desktop"></i>
 							<span class="title">Layouts</span>
 						</a>
-						<ul>
+						<ul class="wrap">
 							<li>
 								<a href="layout-variants.html">
 									<span class="title">Layout Variants &amp; API</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="layout-collapsed-sidebar.html">
 									<span class="title">Collapsed Sidebar</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="layout-static-sidebar.html">
 									<span class="title">Static Sidebar</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="layout-horizontal-menu.html">
 									<span class="title">Horizontal Menu</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="layout-horizontal-plus-sidebar.html">
 									<span class="title">Horizontal &amp; Sidebar Menu</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="layout-horizontal-menu-click-to-open-subs.html">
 									<span class="title">Horizontal Open On Click</span>
 								</a>
 							</li>
-							<li>
+							<li class="main_left">
 								<a href="layout-horizontal-menu-min.html">
 									<span class="title">Horizontal Menu Minimal</span>
 								</a>
@@ -314,454 +310,15 @@
 							</li>
 						</ul>
 					</li>
-					<li>
-						<a href="ui-panels.html">
-							<i class="linecons-note"></i>
-							<span class="title">UI Elements</span>
-						</a>
-						<ul>
-							<li>
-								<a href="ui-panels.html">
-									<span class="title">Panels</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-buttons.html">
-									<span class="title">Buttons</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-tabs-accordions.html">
-									<span class="title">Tabs &amp; Accordions</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-modals.html">
-									<span class="title">Modals</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-breadcrumbs.html">
-									<span class="title">Breadcrumbs</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-blockquotes.html">
-									<span class="title">Blockquotes</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-progressbars.html">
-									<span class="title">Progress Bars</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-navbars.html">
-									<span class="title">Navbars</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-alerts.html">
-									<span class="title">Alerts</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-pagination.html">
-									<span class="title">Pagination</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-typography.html">
-									<span class="title">Typography</span>
-								</a>
-							</li>
-							<li>
-								<a href="ui-other-elements.html">
-									<span class="title">Other Elements</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="ui-widgets.html">
-							<i class="linecons-star"></i>
-							<span class="title">Widgets</span>
-						</a>
-					</li>
-					<li>
-						<a href="mailbox-main.html">
-							<i class="linecons-mail"></i>
-							<span class="title">Mailbox</span>
-							<span class="label label-success pull-right">5</span>
-						</a>
-						<ul>
-							<li>
-								<a href="mailbox-main.html">
-									<span class="title">Inbox</span>
-								</a>
-							</li>
-							<li>
-								<a href="mailbox-compose.html">
-									<span class="title">Compose Message</span>
-								</a>
-							</li>
-							<li>
-								<a href="mailbox-message.html">
-									<span class="title">View Message</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="tables-basic.html">
-							<i class="linecons-database"></i>
-							<span class="title">Tables</span>
-						</a>
-						<ul>
-							<li>
-								<a href="tables-basic.html">
-									<span class="title">Basic Tables</span>
-								</a>
-							</li>
-							<li>
-								<a href="tables-responsive.html">
-									<span class="title">Responsive Table</span>
-								</a>
-							</li>
-							<li>
-								<a th:href="@{/page/toDataTables}">
-									<span class="title">Data Tables</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="forms-native.html">
-							<i class="linecons-params"></i>
-							<span class="title">Forms</span>
-						</a>
-						<ul>
-							<li>
-								<a href="forms-native.html">
-									<span class="title">Native Elements</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-advanced.html">
-									<span class="title">Advanced Plugins</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-wizard.html">
-									<span class="title">Form Wizard</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-validation.html">
-									<span class="title">Form Validation</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-input-masks.html">
-									<span class="title">Input Masks</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-file-upload.html">
-									<span class="title">File Upload</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-editors.html">
-									<span class="title">Editors</span>
-								</a>
-							</li>
-							<li>
-								<a href="forms-sliders.html">
-									<span class="title">Sliders</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="extra-gallery.html">
-							<i class="linecons-beaker"></i>
-							<span class="title">Extra</span>
-							<span class="label label-purple pull-right hidden-collapsed">New Items</span>
-						</a>
-						<ul>
-							<li>
-								<a href="extra-icons-fontawesome.html">
-									<span class="title">Icons</span>
-									<span class="label label-warning pull-right">4</span>
-								</a>
-								<ul>
-									<li>
-										<a href="extra-icons-fontawesome.html">
-											<span class="title">Font Awesome</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-icons-linecons.html">
-											<span class="title">Linecons</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-icons-elusive.html">
-											<span class="title">Elusive</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-icons-meteocons.html">
-											<span class="title">Meteocons</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="extra-maps-google.html">
-									<span class="title">Maps</span>
-								</a>
-								<ul>
-									<li>
-										<a href="extra-maps-google.html">
-											<span class="title">Google Maps</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-maps-advanced.html">
-											<span class="title">Advanced Map</span>
-										</a>
-									</li>
-									<li>
-										<a href="extra-maps-vector.html">
-											<span class="title">Vector Map</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="extra-gallery.html">
-									<span class="title">Gallery</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-calendar.html">
-									<span class="title">Calendar</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-profile.html">
-									<span class="title">Profile</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-login.html">
-									<span class="title">Login</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-lockscreen.html">
-									<span class="title">Lockscreen</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-login-light.html">
-									<span class="title">Login Light</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-timeline.html">
-									<span class="title">Timeline</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-timeline-center.html">
-									<span class="title">Timeline Centerd</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-notes.html">
-									<span class="title">Notes</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-image-crop.html">
-									<span class="title">Image Crop</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-portlets.html">
-									<span class="title">Portlets</span>
-								</a>
-							</li>
-							<li>
-								<a href="blank-sidebar.html">
-									<span class="title">Blank Page</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-search.html">
-									<span class="title">Search</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-invoice.html">
-									<span class="title">Invoice</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-not-found.html">
-									<span class="title">404 Page</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-tocify.html">
-									<span class="title">Tocify</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-loader.html">
-									<span class="title">Loading Progress</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-page-loading-ol.html">
-									<span class="title">Page Loading Overlay</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-notifications.html">
-									<span class="title">Notifications</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-nestable-lists.html">
-									<span class="title">Nestable Lists</span>
-								</a>
-							</li>
-							<li>
-								<a href="extra-scrollable.html">
-									<span class="title">Scrollable</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="charts-main.html">
-							<i class="linecons-globe"></i>
-							<span class="title">Charts</span>
-						</a>
-						<ul>
-							<li>
-								<a href="charts-main.html">
-									<span class="title">Chart Variants</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-range.html">
-									<span class="title">Range Selector</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-sparklines.html">
-									<span class="title">Sparklines</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-map.html">
-									<span class="title">Map Charts</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-gauges.html">
-									<span class="title">Circular Gauges</span>
-								</a>
-							</li>
-							<li>
-								<a href="charts-bar-gauges.html">
-									<span class="title">Bar Gauges</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">
-							<i class="linecons-cloud"></i>
-							<span class="title">Menu Levels</span>
-						</a>
-						<ul>
-							<li>
-								<a href="#">
-									<i class="entypo-flow-line"></i>
-									<span class="title">Menu Level 1.1</span>
-								</a>
-								<ul>
-									<li>
-										<a href="#">
-											<i class="entypo-flow-parallel"></i>
-											<span class="title">Menu Level 2.1</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="entypo-flow-parallel"></i>
-											<span class="title">Menu Level 2.2</span>
-										</a>
-										<ul>
-											<li>
-												<a href="#">
-													<i class="entypo-flow-cascade"></i>
-													<span class="title">Menu Level 3.1</span>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-													<i class="entypo-flow-cascade"></i>
-													<span class="title">Menu Level 3.2</span>
-												</a>
-												<ul>
-													<li>
-														<a href="#">
-															<i class="entypo-flow-branch"></i>
-															<span class="title">Menu Level 4.1</span>
-														</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">
-											<i class="entypo-flow-parallel"></i>
-											<span class="title">Menu Level 2.3</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									<i class="entypo-flow-line"></i>
-									<span class="title">Menu Level 1.2</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="entypo-flow-line"></i>
-									<span class="title">Menu Level 1.3</span>
-								</a>
-							</li>
-						</ul>
-					</li>
 				</ul>
 						
 			</div>
 			
 		</div>
 		
-		<div class="main-content">
+		<div class="main-content" style="height: 500px">
 					
-			<!-- User Info, Notifications and Menu Bar -->
+
 			<nav class="navbar user-info-navbar" role="navigation">
 				
 				<!-- Left links for user info navbar -->
@@ -1473,12 +1030,8 @@
 							spindleSize: 12
 						}
 					});
-					
-					setInterval(function(){  networkRealtimeChartTick(rns_values, rns2_values); }, 1000);
-					setInterval(function(){ networkRealtimeGaugeTick(); }, 2000);
-					setInterval(function(){ networkRealtimeMBupdate(); }, 3000);
-					
-					
+
+
 					
 					// CPU Usage Gauge
 					$("#cpu-usage-gauge").dxCircularGauge({
@@ -1507,62 +1060,9 @@
 							spindleSize: 12
 						}
 					});
-					
-					
-					// Resize charts
-					$(window).on('xenon.resize', function()
-					{
-						$("#pageviews-visitors-chart").data("dxChart").render();
-						$("#server-uptime-chart").data("dxChart").render();
-						$("#realtime-network-stats").data("dxChart").render();
-						
-						$('.first-month').data("dxSparkline").render();
-						$('.second-month').data("dxSparkline").render();
-						$('.third-month').data("dxSparkline").render();
-					});
-					
+
 				});
-				
-				function networkRealtimeChartTick(min_max, min_max2)
-				{
-					var $ = jQuery,
-						i = 0;
-					
-					var chart_data = $('#realtime-network-stats').dxChart('instance').option('dataSource');
-					
-					var count = $('#realtime-network-stats').data('iCount');
-					
-					$('#realtime-network-stats').data('iCount', count + 1);
-					
-					chart_data.shift();
-					chart_data.push({id: count + 1, x1: between(min_max[0],min_max[1]), x2: between(min_max2[0],min_max2[1])});
-					
-					$('#realtime-network-stats').dxChart('instance').option('dataSource', chart_data);
-				}
-				
-				function networkRealtimeGaugeTick()
-				{
-					var nr_gauge = jQuery('#network-realtime-gauge').dxCircularGauge('instance');
-					
-					nr_gauge.value( between(50,200) );
-				}
-				
-				function networkRealtimeMBupdate()
-				{
-					var $el = jQuery("#network-mbs-packets"),
-						options = {
-							useEasing : true, 
-							useGrouping : true, 
-							separator : ',', 
-							decimal : '.', 
-							prefix : '' ,
-							suffix : 'mb/s' 
-						},
-						cntr = new countUp($el[0], parseFloat($el.text().replace('mb/s')), parseFloat(between(10,25) + 1/between(15,30)), 2, 1.5, options);
-						
-					cntr.start();
-				}
-				
+
 				function between(randNumMin, randNumMax)
 				{
 					var randInt = Math.floor((Math.random() * ((randNumMax + 1) - randNumMin)) + randNumMin);
@@ -1570,146 +1070,13 @@
 					return randInt;
 				}
 			</script>
-			
-			<div class="row">
-				<div class="col-sm-3">
-					
-					<div class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="99.9" data-suffix="%" data-duration="2">
-						<div class="xe-icon">
-							<i class="linecons-cloud"></i>
-						</div>
-						<div class="xe-label">
-							<strong class="num">0.0%</strong>
-							<span>Server uptime</span>
-						</div>
-					</div>
-					
-					<div class="xe-widget xe-counter xe-counter-purple" data-count=".num" data-from="1" data-to="117" data-suffix="k" data-duration="3" data-easing="false">
-						<div class="xe-icon">
-							<i class="linecons-user"></i>
-						</div>
-						<div class="xe-label">
-							<strong class="num">1k</strong>
-							<span>Users Total</span>
-						</div>
-					</div>
-					
-					<div class="xe-widget xe-counter xe-counter-info" data-count=".num" data-from="1000" data-to="2470" data-duration="4" data-easing="true">
-						<div class="xe-icon">
-							<i class="linecons-camera"></i>
-						</div>
-						<div class="xe-label">
-							<strong class="num">1000</strong>
-							<span>New Daily Photos</span>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-sm-6">
-					
-					<div class="chart-item-bg">
-						<div class="chart-label">
-							<div class="h3 text-secondary text-bold" data-count="this" data-from="0.00" data-to="14.85" data-suffix="%" data-duration="1">0.00%</div>
-							<span class="text-medium text-muted">More visitors</span>
-						</div>
-						<div id="pageviews-visitors-chart" style="height: 298px;"></div>
-					</div>
-					
-				</div>
-				<div class="col-sm-3">
-					
-					<div class="chart-item-bg">
-						<div class="chart-label chart-label-small">
-							<div class="h4 text-purple text-bold" data-count="this" data-from="0.00" data-to="95.8" data-suffix="%" data-duration="1.5">0.00%</div>
-							<span class="text-small text-upper text-muted">Current Server Uptime</span>
-						</div>
-						<div id="server-uptime-chart" style="height: 134px;"></div>
-					</div>
-					
-					<div class="chart-item-bg">
-						<div class="chart-label chart-label-small">
-							<div class="h4 text-secondary text-bold" data-count="this" data-from="0.00" data-to="320.45" data-decimal="," data-duration="2">0</div>
-							<span class="text-small text-upper text-muted">Avg. of Sales</span>
-						</div>
-						<div id="sales-avg-chart" style="height: 134px; position: relative;">
-							<div style="position: absolute; top: 25px; right: 0; left: 40%; bottom: 0"></div>
-						</div>
-					</div>
-					
-				</div>
+
+			<div class="main_right">
+				<iframe   frameborder="0" scrolling="no" style="width: 100%" src="" id="aa">
+				</iframe>
 			</div>
-			
-			
-			<div class="row">
-				<div class="col-sm-6">
-					
-					<div class="chart-item-bg">
-						<div id="pageviews-stats" style="height: 320px; padding: 20px 0;"></div>
-						
-						<div class="chart-entry-view">
-							<div class="chart-entry-label">
-								Pageviews
-							</div>
-							<div class="chart-entry-value">
-								<div class="sparkline first-month"></div>
-							</div>
-						</div>
-						
-						<div class="chart-entry-view">
-							<div class="chart-entry-label">
-								Visitors
-							</div>
-							<div class="chart-entry-value">
-								<div class="sparkline second-month"></div>
-							</div>
-						</div>
-						
-						<div class="chart-entry-view">
-							<div class="chart-entry-label">
-								Converted Sales
-							</div>
-							<div class="chart-entry-value">
-								<div class="sparkline third-month"></div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-sm-6">
-					
-					<div class="chart-item-bg">
-						<div class="chart-label">
-							<div id="network-mbs-packets" class="h1 text-purple text-bold" data-count="this" data-from="0.00" data-to="21.05" data-suffix="mb/s" data-duration="1">0.00mb/s</div>
-							<span class="text-small text-muted text-upper">Download Speed</span>
-						</div>
-						<div class="chart-right-legend">
-							<div id="network-realtime-gauge" style="width: 170px; height: 140px"></div>
-						</div>
-						<div id="realtime-network-stats" style="height: 320px"></div>
-					</div>
-					
-					<div class="chart-item-bg">
-						<div class="chart-label">
-							<div id="network-mbs-packets" class="h1 text-secondary text-bold" data-count="this" data-from="0.00" data-to="67.35" data-suffix="%" data-duration="1.5">0.00%</div>
-							<span class="text-small text-muted text-upper">CPU Usage</span>
-							
-							<p class="text-medium" style="width: 50%; margin-top: 10px">Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties.</p>
-						</div>
-						<div id="other-stats" style="min-height: 183px">
-							<div id="cpu-usage-gauge" style="width: 170px; height: 140px; position: absolute; right: 20px; top: 20px"></div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
-			
-			
-			<!-- Main Footer -->
-			<!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
-			<!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
-			<!-- Or class "fixed" to  always fix the footer to the end of page -->
-			<footer class="main-footer sticky footer-type-1">
+
+			<footer class="main-footer  footer-type-1" style="margin-top: 33px;">
 				
 				<div class="footer-inner">
 				
@@ -1734,135 +1101,7 @@
 				
 			</footer>
 		</div>
-		
-			
-		<!-- start: Chat Section -->
-		<div id="chat" class="fixed">
-			
-			<div class="chat-inner">
-			
-				
-				<h2 class="chat-header">
-					<a href="#" class="chat-close" data-toggle="chat">
-						<i class="fa-plus-circle rotate-45deg"></i>
-					</a>
-					
-					Chat
-					<span class="badge badge-success is-hidden">0</span>
-				</h2>
-				
-				<script type="text/javascript">
-				// Here is just a sample how to open chat conversation box
-				jQuery(document).ready(function($)
-				{
-					var $chat_conversation = $(".chat-conversation");
-					
-					$(".chat-group a").on('click', function(ev)
-					{
-						ev.preventDefault();
-						
-						$chat_conversation.toggleClass('is-open');
-						
-						$(".chat-conversation textarea").trigger('autosize.resize').focus();
-					});
-					
-					$(".conversation-close").on('click', function(ev)
-					{
-						ev.preventDefault();
-						$chat_conversation.removeClass('is-open');
-					});
-				});
-				</script>
-				
-				
-				<div class="chat-group">
-					<strong>Favorites</strong>
-					
-					<a href="#"><span class="user-status is-online"></span> <em>Catherine J. Watkins</em></a>
-					<a href="#"><span class="user-status is-online"></span> <em>Nicholas R. Walker</em></a>
-					<a href="#"><span class="user-status is-busy"></span> <em>Susan J. Best</em></a>
-					<a href="#"><span class="user-status is-idle"></span> <em>Fernando G. Olson</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Brandon S. Young</em></a>
-				</div>
-				
-				
-				<div class="chat-group">
-					<strong>Work</strong>
-					
-					<a href="#"><span class="user-status is-busy"></span> <em>Rodrigo E. Lozano</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Robert J. Garcia</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Daniel A. Pena</em></a>
-				</div>
-				
-				
-				<div class="chat-group">
-					<strong>Other</strong>
-					
-					<a href="#"><span class="user-status is-online"></span> <em>Dennis E. Johnson</em></a>
-					<a href="#"><span class="user-status is-online"></span> <em>Stuart A. Shire</em></a>
-					<a href="#"><span class="user-status is-online"></span> <em>Janet I. Matas</em></a>
-					<a href="#"><span class="user-status is-online"></span> <em>Mindy A. Smith</em></a>
-					<a href="#"><span class="user-status is-busy"></span> <em>Herman S. Foltz</em></a>
-					<a href="#"><span class="user-status is-busy"></span> <em>Gregory E. Robie</em></a>
-					<a href="#"><span class="user-status is-busy"></span> <em>Nellie T. Foreman</em></a>
-					<a href="#"><span class="user-status is-busy"></span> <em>William R. Miller</em></a>
-					<a href="#"><span class="user-status is-idle"></span> <em>Vivian J. Hall</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Melinda A. Anderson</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Gary M. Mooneyham</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Robert C. Medina</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Dylan C. Bernal</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Marc P. Sanborn</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Kenneth M. Rochester</em></a>
-					<a href="#"><span class="user-status is-offline"></span> <em>Rachael D. Carpenter</em></a>
-				</div>
-			
-			</div>
-			
-			<!-- conversation template -->
-			<div class="chat-conversation">
-				
-				<div class="conversation-header">
-					<a href="#" class="conversation-close">
-						&times;
-					</a>
-					
-					<span class="user-status is-online"></span>
-					<span class="display-name">Arlind Nushi</span> 
-					<small>Online</small>
-				</div>
-				
-				<ul class="conversation-body">	
-					<li>
-						<span class="user">Arlind Nushi</span>
-						<span class="time">09:00</span>
-						<p>Are you here?</p>
-					</li>
-					<li class="odd">
-						<span class="user">Brandon S. Young</span>
-						<span class="time">09:25</span>
-						<p>This message is pre-queued.</p>
-					</li>
-					<li>
-						<span class="user">Brandon S. Young</span>
-						<span class="time">09:26</span>
-						<p>Whohoo!</p>
-					</li>
-					<li class="odd">
-						<span class="user">Arlind Nushi</span>
-						<span class="time">09:27</span>
-						<p>Do you like it?</p>
-					</li>
-				</ul>
-				
-				<div class="chat-textarea">
-					<textarea class="form-control autogrow" placeholder="Type your message"></textarea>
-				</div>
-				
-			</div>
-			
-		</div>
-		<!-- end: Chat Section -->
-		
+
 		
 	</div>
 	
@@ -1871,7 +1110,6 @@
 		<div class="loader-2"></div>
 	</div>
 	
-
 
 
 	<!-- Bottom Scripts -->
@@ -1892,6 +1130,43 @@
 
 	<!-- JavaScripts initializations and stuff -->
 	<script th:src="@{/assets/js/xenon-custom.js}"></script>
+	<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+
+		$().ready(function(){
+			$("iframe").attr("src","/course-selection-system/page/toDashboard4");
+		});
+
+		//获取src值
+		$(".main_left a").on("click",function(){
+			var address =$(this).attr("data-src");
+			$("iframe").attr("src",address);
+		});
+		//一下代码是根据窗口高度在设置iframe的高度
+		var frame = $("#aa");
+		var conHeight = document.getElementById('aa').contentWindow.document.body.scrollHeight;
+		var frameheight = $(window).height();
+		frame.css("height", frameheight);
+
+
+		$(function(){
+			$(".wrap li").click(function() {
+				$(".wrap li").removeClass('active');  // 删除其元素的样式
+				$(this).addClass('active');           // 为点击元素添加类名
+			});
+		});
+
+		$(function(){
+			$(".main-menu li").click(function() {
+				$(this).siblings('li').removeClass('active opened active');
+				$(this).addClass('active opened active');
+			});
+		});
+
+
+
+	</script>
 
 </body>
 </html>
