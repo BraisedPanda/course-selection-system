@@ -12,8 +12,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  **/
 @EnableDiscoveryClient
 @EnableAutoConfiguration
-public class SystemSpringBootApplication {
+public class SystemApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SystemSpringBootApplication.class, args);
+        SpringApplication.run(SystemApplication.class, args);
     }
 }

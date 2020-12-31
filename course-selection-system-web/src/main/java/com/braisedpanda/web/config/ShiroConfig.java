@@ -32,46 +32,19 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
+
+        //这里设置没有登录时，跳转界面
+        shiroFilterFactoryBean.setLoginUrl("/login/loginPage");
+        //这里是没有授权时，跳转的界面
+        shiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
+
         //拦截器
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         // 配置不会被拦截的链接 顺序判断
         filterChainDefinitionMap.put("/login/**", "anon");
         filterChainDefinitionMap.put("/403", "anon");
         filterChainDefinitionMap.put("/408", "anon");
-        filterChainDefinitionMap.put("/verificationCode", "anon");
-        filterChainDefinitionMap.put("/verificationCodeSms", "anon");
-        filterChainDefinitionMap.put("/sys-user/findLoginName", "anon");
-        filterChainDefinitionMap.put("/sys-user/forgetPassword", "anon");
-        filterChainDefinitionMap.put("/sys-user/getCode", "anon");
-        filterChainDefinitionMap.put("/sys-user/validateCode", "anon");
-        filterChainDefinitionMap.put("/sys-user/setNewPassword", "anon");
-        //filterChainDefinitionMap.put("/sys-user/newPassword", "anon");
-        filterChainDefinitionMap.put("/biz-params/bizparams-list/**", "anon");
-        filterChainDefinitionMap.put("/biz-params/bizparams-sublist/**", "anon");
-        filterChainDefinitionMap.put("/biz-params/bizSubParams/**", "anon");
 
-        filterChainDefinitionMap.put("/common/orgs/**", "anon");
-        filterChainDefinitionMap.put("/common/dropDownDicts/**", "anon");
-        filterChainDefinitionMap.put("/sys-dept/**/depts", "anon");
-        filterChainDefinitionMap.put("/sys-user/register", "anon");
-        filterChainDefinitionMap.put("/sys-role/allroles/**", "anon");
-        filterChainDefinitionMap.put("/common/country", "anon");
-        filterChainDefinitionMap.put("/common/**/region", "anon");
-
-        // TODO 公共接口，暂时放行
-        filterChainDefinitionMap.put("/common/auditor", "anon");
-        filterChainDefinitionMap.put("/common/file/**", "anon");
-        filterChainDefinitionMap.put("/common/user", "anon");
-        filterChainDefinitionMap.put("/sys-org/level", "anon");
-        filterChainDefinitionMap.put("/sys-org/secondary", "anon");
-
-        //放开定时任务相关接口
-        filterChainDefinitionMap.put("/job-information-synchroniz/**", "anon");
-        filterChainDefinitionMap.put("/job-information-remind/restart/**", "anon");
-
-        //放开第三方推送接口
-        filterChainDefinitionMap.put("/interface/**", "anon");
-        filterChainDefinitionMap.put("/asset-interface/**", "anon");
 
         // 放开swagger接口文档
         filterChainDefinitionMap.put("/webjars/**", "anon");
@@ -83,11 +56,11 @@ public class ShiroConfig {
         Map<String, Filter> filterMap = new HashMap<>(1);
         shiroFilterFactoryBean.setFilters(filterMap);
 
-//        filterChainDefinitionMap.put("/**", "anon");
+        filterChainDefinitionMap.put("/**", "authc");
 
 
         //未授权界面;
-        shiroFilterFactoryBean.setUnauthorizedUrl("/csmp/403");
+        shiroFilterFactoryBean.setUnauthorizedUrl("/error/404");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 

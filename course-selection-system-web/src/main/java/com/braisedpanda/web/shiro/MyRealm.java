@@ -4,10 +4,7 @@ package com.braisedpanda.web.shiro;
 import com.braisedpanda.model.entity.SysUser;
 import com.braisedpanda.system.service.SysUserService;
 import org.apache.dubbo.config.annotation.Reference;
-import org.apache.shiro.authc.AccountException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.authz.UnauthorizedException;
@@ -37,6 +34,8 @@ public class MyRealm extends AuthorizingRealm {
         SysUser user = (SysUser)principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         //查询登录用户所拥有的角色，并添加角色
+        info.addRole("admin");
+        info.addStringPermission("permission");
         return info;
 
     }
@@ -51,7 +50,7 @@ public class MyRealm extends AuthorizingRealm {
         String password = new String((char[]) auth.getCredentials());
         SysUser user = sysUserService.selectUserByUsernameAndPassword(username,password);
         if (user == null) {
-            throw new AccountException("用户名或密码错误");
+            throw new AuthenticationException("用户名或密码错误");
         }
         return new SimpleAuthenticationInfo(user, password, getName());
     }
