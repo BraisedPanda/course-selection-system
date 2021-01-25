@@ -17,14 +17,19 @@ import org.springframework.web.servlet.ModelAndView;
 @Api(value = "/page", tags = {"页面跳转接口"})
 public class PageController {
 
-    @GetMapping("/toDashboard4")
-    public ModelAndView toDashboard4(){
-        return new ModelAndView("dashboard/dashboard");
+    @GetMapping("/toIndex")
+    public ModelAndView toIndex(){
+        return new ModelAndView("index");
     }
 
-    @GetMapping("/toDashboard2")
-    public ModelAndView toDashboard2(){
-        return new ModelAndView("dashboard/dashboard-2");
+    @GetMapping("/toMain")
+    public ModelAndView toMain(){
+        return new ModelAndView("main");
+    }
+
+    @GetMapping("/toChat")
+    public ModelAndView toChat(){
+        return new ModelAndView("chat");
     }
 
     @GetMapping("/toDataTables")

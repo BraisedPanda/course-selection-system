@@ -56,8 +56,8 @@ public class ShiroConfig {
         Map<String, Filter> filterMap = new HashMap<>(1);
         shiroFilterFactoryBean.setFilters(filterMap);
 
-        filterChainDefinitionMap.put("/**", "authc");
-
+//        filterChainDefinitionMap.put("/**", "authc");
+        filterChainDefinitionMap.put("/**", "anon");
 
         //未授权界面;
         shiroFilterFactoryBean.setUnauthorizedUrl("/error/404");

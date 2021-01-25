@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" th:href="@{/images/favicon.ico}">
+
+    <title>Sunny Admin - Dashboard  Chats </title>
+  
+	<!-- Vendors Style-->
+	<link rel="stylesheet" th:href="@{/assets/css/vendors_css.css}">
+	  
+	<!-- Style-->  
+	<link rel="stylesheet" th:href="@{/assets/css/style.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/skin_color.css}">
+
+
+
+</head>
+<body class="hold-transition light-skin fixed sidebar-mini theme-primary">
+	
+<div class="wrapper">
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Content Header (Page header) -->	  
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">Chat App</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<li class="breadcrumb-item" aria-current="page">Contact</li>
+								<li class="breadcrumb-item active" aria-current="page">Chat app</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>  
+
+		<!-- Main content -->
+		<section class="content">
+			<div class="row">
+				<div class="col-lg-3 col-12">
+					<div class="box">
+						<div class="box-header with-border p-0">
+							<div class="form-element lookup">
+								<input class="form-control p-20 w-p100" type="text" placeholder="Search Contact">
+							</div>
+						</div>
+						<div class="box-body p-0">
+						  <div id="chat-contact" class="media-list media-list-hover media-list-divided ">
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/2.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Hossein Shams</a></h6>
+								<small class="text-green">Online</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/1.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Maryam Amiri</a></h6>
+								<small class="text-warning">Away</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/3.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Sarah Conner</a></h6>
+								<small class="text-danger">Busy</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/4.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Frank Camly</a></h6>
+								<small class="text-danger">Busy</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/5.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Ted Erricson</a></h6>
+								<small class="text-success">Online</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/6.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Ranian Mostalik</a></h6>
+								<small class="text-success">Online</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/7.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">John Franklin</a></h6>
+								<small class="text-success">Online</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/8.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Emma Larson</a></h6>
+								<small class="text-success">Online</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/3.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Sarah Conner</a></h6>
+								<small class="text-danger">Busy</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/4.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Frank Camly</a></h6>
+								<small class="text-danger">Busy</small>
+							  </div>
+							</div>
+
+							<div class="media media-single">
+							  <a href="#" class="avatar avatar-lg status-success">
+								<img src="../images/avatar/5.jpg" alt="...">
+							  </a>
+
+							  <div class="media-body">
+								<h6><a href="#">Ted Erricson</a></h6>
+								<small class="text-success">Online</small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9 col-12">
+					<div class="box direct-chat">
+						<div class="box-header with-border">
+						  <h4 class="box-title">Chat Message</h4>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body">
+						  <!-- Conversations are loaded here -->
+						  <div id="chat-app" class="direct-chat-messages chat-app">
+							<!-- Message. Default to the left -->
+							<div class="direct-chat-msg mb-30">
+							  <div class="clearfix mb-15">
+								<span class="direct-chat-name">James Anderson</span>
+								<span class="direct-chat-timestamp pull-right">April 14, 2017</span>
+							  </div>
+							  <!-- /.direct-chat-info -->
+							  <img class="direct-chat-img avatar" src="../images/user1-128x128.jpg" alt="message user image">
+							  <!-- /.direct-chat-img -->
+							  <div class="direct-chat-text">
+								<p>Hi</p>
+								<p>How are you ...???</p>
+								<p>What are you doing tomorrow?<br>Would you like to get out of the town for a while?</p>
+								<p class="direct-chat-timestamp"><time datetime="2018">23:58</time></p>
+							  </div>
+
+							  <!-- /.direct-chat-text -->
+							</div>
+							<!-- /.direct-chat-msg -->
+
+							<!-- Message to the right -->
+							<div class="direct-chat-msg right mb-30">
+							  <div class="clearfix mb-15">
+								<span class="direct-chat-name pull-right">You</span>
+							  </div>
+							  <div class="direct-chat-text">
+								<p>Hiii, I'm good.</p>
+								<p>How are you doing?</p>
+								<p>Long time no see!</p>
+								<p class="direct-chat-timestamp"><time datetime="2018">00:06</time></p>
+							  </div>
+							  <!-- /.direct-chat-text -->
+							</div>
+							<!-- /.direct-chat-msg -->
+
+							<div class="direct-chat-msg mb-30">
+							  <img class="direct-chat-img avatar" src="../images/user1-128x128.jpg" alt="message user image">
+							  <!-- /.direct-chat-img -->
+							  <div class="direct-chat-text">
+								<p>Yeah</p>
+								<p>We were out of country for a vacation. We visited several beautiful countries and made a lot of memmories.</p> 
+								<p class="direct-chat-timestamp"><time datetime="2018">00:06</time></p>
+							  </div>					
+
+							  <!-- /.direct-chat-text -->
+							</div>
+							<!-- /.direct-chat-msg -->
+
+							<!-- Message to the right -->
+							<div class="direct-chat-msg right mb-30">
+							  <div class="direct-chat-text">
+								<p>That's awesome!</p>
+								<p>You should tell me everything with all small details. I'm so curious to hear your stories.</p>
+								<p>Did you take pictures?</p>
+								<p class="direct-chat-timestamp"><time datetime="2018">00:09</time></p>
+							  </div>
+							  <!-- /.direct-chat-text -->
+							</div>
+							<!-- /.direct-chat-msg -->
+
+							 <div class="direct-chat-msg mb-30">
+							  <div class="clearfix mb-15">
+								<span class="direct-chat-name">James Anderson</span>
+								<span class="direct-chat-timestamp pull-right">April 16, 2017</span>
+							  </div>
+							  <!-- /.direct-chat-info -->
+							  <img class="direct-chat-img avatar" src="../images/user1-128x128.jpg" alt="message user image">
+							  <!-- /.direct-chat-img -->
+							  <div class="direct-chat-text">
+								<p>We took a loooot. Here is some of them, I'll show you the rest once we meet.</p>
+								<p class="popup-gallery">
+									<a href="../images/gallery/thumb/4.jpg" title="Caption. Can be aligned to any side and contain any HTML.">
+										<img src="../images/gallery/thumb/4.jpg" width="32.5%" alt="" />
+									</a>
+									<a href="../images/gallery/thumb/5.jpg" title="This image fits only horizontally.">
+										<img src="../images/gallery/thumb/5.jpg" width="32.5%" alt="" />
+									</a>
+									<a href="../images/gallery/thumb/6.jpg">
+										<img src="../images/gallery/thumb/6.jpg" width="32.5%" alt="" />
+									</a>
+								</p>
+								<p class="direct-chat-timestamp"><time datetime="2018">00:09</time></p>
+							  </div>					
+
+							  <!-- /.direct-chat-text -->
+							</div>
+							<!-- /.direct-chat-msg -->
+
+							<!-- Message to the right -->
+							<div class="direct-chat-msg right mb-30">
+							  <div class="clearfix mb-15">
+								<span class="direct-chat-name pull-right">You</span>
+							  </div>
+							  <div class="direct-chat-text">
+								<p>These places are fantastic. Wish I could join you guys </p>
+								<p class="direct-chat-timestamp"><time datetime="2018">00:09</time></p>
+							  </div>
+							  <!-- /.direct-chat-text -->
+							</div>
+							<!-- /.direct-chat-msg -->
+
+						  </div>
+						  <!--/.direct-chat-messages-->
+						</div>
+						<!-- /.box-body -->
+						<div class="box-footer">
+						  <form action="#" method="post">
+							<div class="input-group">
+							  <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+								  <div class="input-group-addon">
+									<div class="align-self-end gap-items">
+									  <span class="publisher-btn file-group">
+										<i class="fa fa-paperclip file-browser"></i>
+										<input type="file">
+									  </span>
+									  <a class="publisher-btn" href="#"><i class="fa fa-smile-o"></i></a>
+									  <a class="publisher-btn" href="#"><i class="fa fa-paper-plane"></i></a>
+									</div>
+								  </div>
+							</div>
+						  </form>
+						</div>
+						<!-- /.box-footer-->
+					  </div>
+				</div>								
+			</div>
+		</section>
+		<!-- /.content -->
+	  </div>
+	  
+  </div>
+  <!-- /.content-wrapper -->
+ 
+   <footer class="main-footer">
+    <div class="pull-right d-none d-sm-inline-block">
+        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+		  <li class="nav-item">
+			<a class="nav-link" href="javascript:void(0)">FAQ</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Purchase Now</a>
+		  </li>
+		</ul>
+    </div>
+	  &copy; 2020 <a href="http://www.bootstrapmb.com/">Psd to Html Expert</a>. All Rights Reserved.
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+    
+
+	<!-- Vendor JS -->
+	<script th:src="@{/assets/js/vendors.min.js}"></script>
+    <script th:src="@{/assets/icons/feather-icons/feather.min.js}"></script>
+    <script th:src="@{/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js}"></script>
+    <script th:src="@{/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js}"></script>
+    <script th:src="@{/assets/vendor_components/perfect-scrollbar-master/perfect-scrollbar.jquery.min.js}"></script>
+    <script th:src="@{/assets/js/pages/app-chat.js}"></script>
+    
+	<!-- Sunny Admin App -->
+	<script th:src="@{/assets/js/template.js}"></script>
+
+
+
+
+</body>
+</html>
