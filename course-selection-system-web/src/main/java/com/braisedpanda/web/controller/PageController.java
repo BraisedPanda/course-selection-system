@@ -1,8 +1,8 @@
 package com.braisedpanda.web.controller;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -13,28 +13,28 @@ import org.springframework.web.servlet.ModelAndView;
  * @create: 2020-12-09 14:31
  **/
 @RestController
-@RequestMapping("/page")
-@Api(value = "/page", tags = {"页面跳转接口"})
+@Api(tags = {"页面跳转接口"})
 public class PageController {
 
-    @GetMapping("/toIndex")
+    @GetMapping("/index")
     public ModelAndView toIndex(){
         return new ModelAndView("index");
     }
 
-    @GetMapping("/toMain")
+    @GetMapping("/main")
     public ModelAndView toMain(){
         return new ModelAndView("main");
     }
 
-    @GetMapping("/toChat")
+    @GetMapping("/chat")
     public ModelAndView toChat(){
         return new ModelAndView("chat");
     }
 
-    @GetMapping("/toDataTables")
-    public ModelAndView toDataTables(){
-        return new ModelAndView("tables/tables-datatables");
+    @GetMapping("/login")
+    @ApiOperation("跳转到登录页面")
+    public ModelAndView toLoginPage(){
+        return new ModelAndView("login");
     }
 
 }

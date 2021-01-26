@@ -34,17 +34,21 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setSecurityManager(securityManager);
 
         //这里设置没有登录时，跳转界面
-        shiroFilterFactoryBean.setLoginUrl("/login/loginPage");
+        shiroFilterFactoryBean.setLoginUrl("/login");
         //这里是没有授权时，跳转的界面
         shiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
+
 
         //拦截器
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         // 配置不会被拦截的链接 顺序判断
+        filterChainDefinitionMap.put("/page/**", "anon");
         filterChainDefinitionMap.put("/login/**", "anon");
         filterChainDefinitionMap.put("/403", "anon");
         filterChainDefinitionMap.put("/408", "anon");
 
+        filterChainDefinitionMap.put("/assets/**", "anon");
+        filterChainDefinitionMap.put("/images/**", "anon");
 
         // 放开swagger接口文档
         filterChainDefinitionMap.put("/webjars/**", "anon");
@@ -56,8 +60,8 @@ public class ShiroConfig {
         Map<String, Filter> filterMap = new HashMap<>(1);
         shiroFilterFactoryBean.setFilters(filterMap);
 
-//        filterChainDefinitionMap.put("/**", "authc");
-        filterChainDefinitionMap.put("/**", "anon");
+        filterChainDefinitionMap.put("/**", "authc");
+//        filterChainDefinitionMap.put("/**", "anon");
 
         //未授权界面;
         shiroFilterFactoryBean.setUnauthorizedUrl("/error/404");

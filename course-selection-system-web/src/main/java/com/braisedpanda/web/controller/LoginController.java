@@ -24,24 +24,11 @@ import javax.servlet.http.HttpSession;
  * @create: 2020-11-02 15:01
  **/
 @Controller
-@RequestMapping("/login")
-@Api(value = "/login", tags = {"登录模块"})
+@Api(tags = {"登录模块"})
 public class LoginController {
 
     @Reference(version="1.0")
     private SysUserService sysUserService;
-
-    @GetMapping("/loginPage")
-    @ApiOperation("跳转到登录页面")
-    public ModelAndView toLoginPage(){
-        return new ModelAndView("login");
-    }
-
-    @PostMapping("/index")
-    @ApiOperation("跳转到首页")
-    public ModelAndView toIndex(){
-        return new ModelAndView("index");
-    }
 
     @PostMapping("/login")
     @ApiOperation("用户登录")
