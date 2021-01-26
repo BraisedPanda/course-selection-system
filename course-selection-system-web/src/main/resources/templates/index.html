@@ -172,7 +172,7 @@
       <!-- sidebar menu-->
       <ul class="sidebar-menu" data-widget="tree">  
 		  
-		<li class="main_left">
+		<li class="main_left active">
           <a href="javascript:void(0)" data-src="/course-selection-system/page/toMain" target="_top">
             <i data-feather="pie-chart"></i>
 			<span>Dashboard</span>
@@ -453,9 +453,7 @@
   </aside>
 
 
-    <iframe frameborder="0" scrolling="no" style="width: 100%;height: 100%" src="" id="aa">
-    </iframe>
-
+    <iframe id="mainiframe" width="100%" scrolling="auto" height="600" src=" "  frameborder="0" ></iframe>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right d-none d-sm-inline-block">
@@ -748,21 +746,25 @@
     <script th:src="@{/assets/js/pages/dashboard.js}"></script>
 
     <script>
-
+        // 页面第一次加载时，iframe填充页面
         $().ready(function(){
-            $("iframe").attr("src","/course-selection-system/page/toIndex");
+            $("iframe").attr("src","/course-selection-system/page/toMain");
         });
 
-        //获取src值
-        $(".main_left a").on("click",function(){
-            var address =$(this).attr("data-src");
-            $("iframe").attr("src",address);
+        // 点击左侧菜单，获取url填充页面
+        $(".main_left a").on("click",function() {
+            var address = $(this).attr("data-src");
+            $("iframe").attr("src", address);
+            changeFrameHeight();
         });
-        //一下代码是根据窗口高度在设置iframe的高度
-        var frame = $("#aa");
-        var conHeight = document.getElementById('aa').contentWindow.document.body.scrollHeight;
-        var frameheight = $(window).height();
-        frame.css("height", frameheight);
+
+        function changeFrameHeight(){
+            var ifm= document.getElementById("mainiframe");
+            ifm.height=document.documentElement.clientHeight-60;
+        }
+        window.onresize=function(){ changeFrameHeight();}
+        $(function(){changeFrameHeight();});
+
 
         $(function(){
             $(".sidebar-menu li").click(function() {
