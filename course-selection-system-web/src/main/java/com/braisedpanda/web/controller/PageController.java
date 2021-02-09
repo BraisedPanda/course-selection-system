@@ -37,4 +37,9 @@ public class PageController {
         return new ModelAndView("login");
     }
 
+    @GetMapping("/alerts")
+    public ModelAndView toAlerts(){
+        return new ModelAndView("components_alerts");
+    }
+
 }

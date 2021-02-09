@@ -19,7 +19,11 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" th:href="@{/assets/login/css/util.css}">
 	<link rel="stylesheet" type="text/css" th:href="@{/assets/login/css/main.css}">
-<!--===============================================================================================-->
+	<link rel="stylesheet" th:href="@{/assets/css/vendors_css.css}">
+
+	<!-- Style-->
+	<link rel="stylesheet" th:href="@{/assets/css/style.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/skin_color.css}">
 </head>
 <body>
 	
@@ -32,9 +36,9 @@
 
 				<form class="login100-form validate-form" action="/course-selection-system/login" method="post">
 					<span class="login100-form-title">
-						Login
+						欢迎登录
 					</span>
-
+					<input id="tips" hidden th:value="${tips}">
 					<div class="wrap-input100 validate-input" data-validate = "请输入账号！">
 						<input class="input100" type="text" name="username" placeholder="账号">
 						<span class="focus-input100"></span>
@@ -94,11 +98,28 @@
 			scale: 1.1
 		})
 	</script>
+	<script th:src="@{/assets/js/vendors.min.js}"></script>
+	<script th:src="@{/assets/icons/feather-icons/feather.min.js}"></script>
+	<script th:src="@{/assets/vendor_components/jquery-toast-plugin-master/src/jquery.toast.js}"></script>
+	<script th:src="@{/assets/js/pages/toastr.js}"></script>
+	<script th:src="@{/assets/js/pages/notification.js}"></script>
+
+	<!-- Sunny Admin App -->
+	<script th:src="@{/assets/js/template.js}"></script>
 <!--===============================================================================================-->
 	<script th:src="@{/assets/login/js/main.js}"></script>
 	<script>
-		$("#loginButton").click = function () {
-			console.log("点击了登录按钮");
+		var tip = $("#tips").val();
+		if(tip != null && tip != ''){
+			$.toast({
+				heading: '登录失败',
+				text: tip,
+				position: 'top-right',
+				loaderBg: '#7a7374',
+				icon: 'info',
+				hideAfter: 3500,
+				stack: 6
+			});
 		}
 	</script>
 </body>
