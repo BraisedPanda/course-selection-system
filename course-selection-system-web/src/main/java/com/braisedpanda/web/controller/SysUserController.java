@@ -7,16 +7,11 @@ import com.braisedpanda.system.service.SysUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.dubbo.config.annotation.Reference;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.*;
-import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpSession;
 
 /**
  * @program: course-selection-system
@@ -47,6 +42,7 @@ public class SysUserController {
     }
 
     @GetMapping("/")
+    @ApiOperation("跳转至登录页面")
     public ModelAndView toIndex(){
         return new ModelAndView("login");
     }

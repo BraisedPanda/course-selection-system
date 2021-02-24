@@ -27,36 +27,36 @@
 </head>
 <body>
 	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
+	<div class="limiter-course">
+		<div class="container-login-course">
+			<div class="wrap-login-course">
+				<div class="login-course-pic js-tilt" data-tilt>
 					<img th:src="@{/assets/login/images/img-01.png}" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="/course-selection-system/login" method="post">
-					<span class="login100-form-title">
+				<form class="login-course-form validate-form" action="/course-selection-system/login" method="post">
+					<span class="login-course-form-title">
 						统一登录平台
 					</span>
 					<input id="tips" hidden th:value="${tips}">
-					<div class="wrap-input100 validate-input" data-validate = "请输入账号！">
-						<input class="input100" type="text" name="username" placeholder="账号">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
+					<div class="wrap-input-course validate-input" data-validate = "请输入账号！">
+						<input class="input-course" type="text" name="username" placeholder="账号">
+						<span class="focus-input-course"></span>
+						<span class="symbol-input-course">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "请输入密码！">
-						<input class="input100" type="password" name="password" placeholder="密码">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
+					<div class="wrap-input-course validate-input" data-validate = "请输入密码！">
+						<input class="input-course" type="password" name="password" placeholder="密码">
+						<span class="focus-input-course"></span>
+						<span class="symbol-input-course">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
 					
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" id="loginButton">
+					<div class="container-login-course-form-btn">
+						<button class="login-course-form-btn" id="loginButton">
 							登录
 						</button>
 					</div>
@@ -67,13 +67,6 @@
 						</span>
 						<a class="txt2" href="#">
 							密码?
-						</a>
-					</div>
-
-					<div class="text-center p-t-136">
-						<a class="txt2" href="#">
-<!--							创建账户-->
-							<i class="fa fa-long-arrow-right m-l-5" hidden aria-hidden="true"></i>
 						</a>
 					</div>
 				</form>

@@ -182,22 +182,61 @@
         <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
-            <span>在线选课</span>
+            <span>学生管理</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/chat" target="_top"><i class="ti-more"></i>必修课选择</a></li>
-            <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>提示页面</a></li>
+            <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/chat" target="_top"><i class="ti-more"></i>选课管理</a></li>
+            <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>课程安排</a></li>
+		    <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>个人信息</a></li>
+		    <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>课程成绩</a></li>
+		    <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>教师评价</a></li>
           </ul>
         </li> 
 		  
 
 
-        <li class="header nav-small-cap">个人中心</li>
+<!--        <li class="header nav-small-cap">个人中心</li>-->
 
-        <li class="treeview">
+		  <li class="treeview">
+			  <a href="#">
+				  <i data-feather="message-circle"></i>
+				  <span>教师管理</span>
+				  <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+			  </a>
+			  <ul class="treeview-menu">
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/chat" target="_top"><i class="ti-more"></i>课程发布</a></li>
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>课程记录</a></li>
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>学生成绩</a></li>
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>成绩统计</a></li>
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>学生评价</a></li>
+			  </ul>
+		  </li>
+
+<!--		  <li class="header nav-small-cap">个人中心</li>-->
+
+		  <li class="treeview">
+			  <a href="#">
+				  <i data-feather="message-circle"></i>
+				  <span>教务处管理</span>
+				  <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+			  </a>
+			  <ul class="treeview-menu">
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/chat" target="_top"><i class="ti-more"></i>课程编排</a></li>
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>课程审核</a></li>
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>评价管理</a></li>
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>通知管理</a></li>
+				  <li class="main_left"><a href="javascript:void(0)" data-src="/course-selection-system/alerts" target="_top"><i class="ti-more"></i>其他设置</a></li>
+			  </ul>
+		  </li>
+		<!-- 三级菜单
+		  <li class="treeview">
           <a href="#">
             <i data-feather="layers"></i>
 			<span>Multilevel</span>
@@ -231,7 +270,7 @@
             <li><a href="#">Level One</a></li>
           </ul>
         </li>  
-		  
+		 -->
 		<li>
           <a th:href="@{/logout}">
             <i data-feather="lock"></i>

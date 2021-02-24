@@ -33,7 +33,7 @@ public class LoginController {
     @PostMapping("/login")
     @ApiOperation("用户登录")
     public ModelAndView login(String username, String password, HttpSession session){
-        ModelAndView modelAndView = new ModelAndView();
+        ModelAndView courseModelAndView = new ModelAndView();
         // 从SecurityUtils里边创建一个 subject
         Subject subject = SecurityUtils.getSubject();
         // 在认证提交前准备 token（令牌）
@@ -42,36 +42,36 @@ public class LoginController {
         try {
             subject.login(token);
         } catch (UnknownAccountException uae) {
-            modelAndView.addObject("tips","未知账户~");
-            modelAndView.setViewName("login");
-            return modelAndView;
+            courseModelAndView.addObject("tips","未知账户~");
+            courseModelAndView.setViewName("login");
+            return courseModelAndView;
         } catch (IncorrectCredentialsException ice) {
-            modelAndView.addObject("tips","密码不正确~");
-            modelAndView.setViewName("login");
-            return modelAndView;
+            courseModelAndView.addObject("tips","密码不正确~");
+            courseModelAndView.setViewName("login");
+            return courseModelAndView;
         } catch (LockedAccountException lae) {
-            modelAndView.addObject("tips","账户已锁定~");
-            modelAndView.setViewName("login");
-            return modelAndView;
+            courseModelAndView.addObject("tips","账户已锁定~");
+            courseModelAndView.setViewName("login");
+            return courseModelAndView;
         } catch (ExcessiveAttemptsException eae) {
-            modelAndView.addObject("tips","用户名或密码错误次数过多~");
-            modelAndView.setViewName("login");
-            return modelAndView;
+            courseModelAndView.addObject("tips","用户名或密码错误次数过多~");
+            courseModelAndView.setViewName("login");
+            return courseModelAndView;
         } catch (AuthenticationException ae) {
-            modelAndView.addObject("tips",ae.getMessage());
-            modelAndView.setViewName("login");
-            return modelAndView;
+            courseModelAndView.addObject("tips",ae.getMessage());
+            courseModelAndView.setViewName("login");
+            return courseModelAndView;
         }
         if (subject.isAuthenticated()) {
             SysUser user = sysUserService.selectUserByUsernameAndPassword(username,password);
             session.setAttribute("user",user);
-            modelAndView.setViewName("index");
-            return modelAndView;
+            courseModelAndView.setViewName("index");
+            return courseModelAndView;
         } else {
             token.clear();
-            modelAndView.addObject("tips","*未知账户~");
-            modelAndView.setViewName("login");
-            return modelAndView;
+            courseModelAndView.addObject("tips","*未知账户~");
+            courseModelAndView.setViewName("login");
+            return courseModelAndView;
         }
     }
 

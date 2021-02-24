@@ -28,47 +28,40 @@ import java.util.Map;
 
 @Configuration
 public class ShiroConfig {
-    @Bean("shiroFilter")
-    public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
-        ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
-        shiroFilterFactoryBean.setSecurityManager(securityManager);
+    @Bean("courseShiroFilter")
+    public ShiroFilterFactoryBean courseShiroFilter(SecurityManager courseSecurityManager) {
+        ShiroFilterFactoryBean courseShiroFilterFactoryBean = new ShiroFilterFactoryBean();
+        courseShiroFilterFactoryBean.setSecurityManager(courseSecurityManager);
 
-        //这里设置没有登录时，跳转界面
-        shiroFilterFactoryBean.setLoginUrl("/login");
-        //这里是没有授权时，跳转的界面
-        shiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
-
-
-        //拦截器
-        Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
-        // 配置不会被拦截的链接 顺序判断
-        filterChainDefinitionMap.put("/page/**", "anon");
-        filterChainDefinitionMap.put("/login/**", "anon");
-        filterChainDefinitionMap.put("/403", "anon");
-        filterChainDefinitionMap.put("/408", "anon");
-
-        filterChainDefinitionMap.put("/assets/**", "anon");
-        filterChainDefinitionMap.put("/images/**", "anon");
+        // 没有登录时，跳转至登录页面
+        courseShiroFilterFactoryBean.setLoginUrl("/login");
+        // 没有任何授权时，跳转至未授权界面
+        courseShiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
+        // 创建拦截器
+        Map<String, String> courseFilterChainDefinitionMap = new LinkedHashMap<>();
+        // 自定义拦截器拦截的url
+        courseFilterChainDefinitionMap.put("/page/**", "anon");
+        courseFilterChainDefinitionMap.put("/login/**", "anon");
+        courseFilterChainDefinitionMap.put("/403", "anon");
+        // 放行静态资源
+        courseFilterChainDefinitionMap.put("/assets/**", "anon");
+        courseFilterChainDefinitionMap.put("/images/**", "anon");
 
         // 放开swagger接口文档
-        filterChainDefinitionMap.put("/webjars/**", "anon");
-        filterChainDefinitionMap.put("/swagger-resources", "anon");
-        filterChainDefinitionMap.put("/v2/api-docs", "anon");
-        filterChainDefinitionMap.put("/doc.html", "anon");
+        courseFilterChainDefinitionMap.put("/webjars/**", "anon");
+        courseFilterChainDefinitionMap.put("/swagger-resources", "anon");
+        courseFilterChainDefinitionMap.put("/v2/api-docs", "anon");
+        courseFilterChainDefinitionMap.put("/doc.html", "anon");
 
-        // 添加自己的过滤器并且取名为jwt
         Map<String, Filter> filterMap = new HashMap<>(1);
-        shiroFilterFactoryBean.setFilters(filterMap);
+        courseShiroFilterFactoryBean.setFilters(filterMap);
 
-        filterChainDefinitionMap.put("/**", "authc");
+        courseFilterChainDefinitionMap.put("/**", "authc");
 //        filterChainDefinitionMap.put("/**", "anon");
-
         //未授权界面;
-        shiroFilterFactoryBean.setUnauthorizedUrl("/error/404");
-
-        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
-
-        return shiroFilterFactoryBean;
+        courseShiroFilterFactoryBean.setUnauthorizedUrl("/error/404");
+        courseShiroFilterFactoryBean.setFilterChainDefinitionMap(courseFilterChainDefinitionMap);
+        return courseShiroFilterFactoryBean;
     }
 
     @Bean(name = "lifecycleBeanPostProcessor")
