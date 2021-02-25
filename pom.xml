@@ -14,6 +14,7 @@
         <module>course-selection-system-student</module>
         <module>course-selection-system-web</module>
         <module>course-selection-system-system</module>
+        <module>course-selection-system-course</module>
     </modules>
 
     <properties>

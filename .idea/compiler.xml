@@ -11,19 +11,24 @@
         <module name="course-selection-system-web" />
         <module name="demo" />
         <module name="course-selection-system-system-api" />
-        <module name="course-selection-system-system" />
+        <module name="course-selection-system-base" />
+        <module name="course-selection-system-course-api" />
         <module name="course-selection-system-user-api" />
         <module name="course-selection-system-system-privoder" />
         <module name="course-selection-system-dependencies" />
         <module name="course-selection-system-student-api" />
+        <module name="course-selection-system-course-privoder" />
         <module name="course-selection-system-student-privoder" />
-        <module name="course-selection-system-base" />
+        <module name="course-selection-system-system" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="course-selection-system" target="1.8" />
       <module name="course-selection-system-api" target="1.8" />
       <module name="course-selection-system-base" target="1.8" />
+      <module name="course-selection-system-course" target="1.8" />
+      <module name="course-selection-system-course-api" target="1.8" />
+      <module name="course-selection-system-course-privoder" target="1.8" />
       <module name="course-selection-system-dependencies" target="1.8" />
       <module name="course-selection-system-student" target="1.8" />
       <module name="course-selection-system-student-api" target="1.8" />

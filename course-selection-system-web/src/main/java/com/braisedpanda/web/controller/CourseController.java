@@ -1,8 +1,14 @@
 package com.braisedpanda.web.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.braisedpanda.course.service.IInfoCourseService;
+import com.braisedpanda.model.ResponseStatus;
+import com.braisedpanda.model.entity.InfoCourse;
+import org.apache.dubbo.config.annotation.Reference;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -13,6 +19,16 @@ import java.util.Random;
  * @create: 2021-02-24 22:12
  **/
 public class CourseController {
+
+    @Reference
+    private IInfoCourseService infoCourseService;
+
+    public ResponseStatus courseArrange(String courseIds, String courseType){
+        List<String> idList = new ArrayList<>(Arrays.asList(courseIds.split(",")));
+        LambdaQueryWrapper<InfoCourse> courseLambdaQueryWrapper1 = new LambdaQueryWrapper<>();
+        infoCourseService.list(courseLambdaQueryWrapper1);
+        return null;
+    }
 
     @Test
     public void test(){

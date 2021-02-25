@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.braisedpanda.course.mapper.InfoCourseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.braisedpanda.model.entity.InfoCourse">
+        <id column="id" property="id" />
+        <result column="course_name" property="courseName" />
+        <result column="teacher_id" property="teacherId" />
+        <result column="student_number" property="studentNumber" />
+        <result column="room_id" property="roomId" />
+        <result column="course_type" property="courseType" />
+        <result column="arrange_id" property="arrangeId" />
+        <result column="create_user" property="createUser" />
+        <result column="create_date" property="createDate" />
+        <result column="update_user" property="updateUser" />
+        <result column="update_date" property="updateDate" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, course_name, teacher_id, student_number, room_id, course_type, arrange_id, create_user, create_date, update_user, update_date
+    </sql>
+
+</mapper>

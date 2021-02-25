@@ -3,6 +3,9 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/course-selection-system-base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/course-selection-system-base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/course-selection-system-course/course-selection-system-course-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/course-selection-system-course/course-selection-system-course-privoder/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/course-selection-system-course/course-selection-system-course-privoder/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/course-selection-system-student/course-selection-system-student-privoder/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/course-selection-system-system/course-selection-system-system-api/src/main/java" charset="UTF-8" />
